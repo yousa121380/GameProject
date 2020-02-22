@@ -1,0 +1,3 @@
+D:/yousa/C++Project/project/sfml/build/CMakeFiles/Cpp.dir
+D:/yousa/C++Project/project/sfml/build/CMakeFiles/edit_cache.dir
+D:/yousa/C++Project/project/sfml/build/CMakeFiles/rebuild_cache.dir

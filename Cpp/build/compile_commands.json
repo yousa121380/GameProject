@@ -1,0 +1,7 @@
+[
+{
+  "directory": "D:/yousa/C++Project/project/Cpp/build",
+  "command": "D:\\yousa\\C++Project\\mingw64\\bin\\g++.exe   @CMakeFiles/Cpp.dir/includes_CXX.rsp -g   -std=gnu++17 -o CMakeFiles\\Cpp.dir\\Src\\main.cpp.obj -c D:\\yousa\\C++Project\\project\\Cpp\\Src\\main.cpp",
+  "file": "D:/yousa/C++Project/project/Cpp/Src/main.cpp"
+}
+]

@@ -1,0 +1,22 @@
+[
+{
+  "directory": "D:/yousa/C++Project/project/sfml/build",
+  "command": "D:\\yousa\\C++Project\\mingw64\\bin\\g++.exe   @CMakeFiles/Cpp.dir/includes_CXX.rsp -g   -std=gnu++17 -o CMakeFiles\\Cpp.dir\\Src\\AssetManager.cpp.obj -c D:\\yousa\\C++Project\\project\\sfml\\Src\\AssetManager.cpp",
+  "file": "D:/yousa/C++Project/project/sfml/Src/AssetManager.cpp"
+},
+{
+  "directory": "D:/yousa/C++Project/project/sfml/build",
+  "command": "D:\\yousa\\C++Project\\mingw64\\bin\\g++.exe   @CMakeFiles/Cpp.dir/includes_CXX.rsp -g   -std=gnu++17 -o CMakeFiles\\Cpp.dir\\Src\\Game.cpp.obj -c D:\\yousa\\C++Project\\project\\sfml\\Src\\Game.cpp",
+  "file": "D:/yousa/C++Project/project/sfml/Src/Game.cpp"
+},
+{
+  "directory": "D:/yousa/C++Project/project/sfml/build",
+  "command": "D:\\yousa\\C++Project\\mingw64\\bin\\g++.exe   @CMakeFiles/Cpp.dir/includes_CXX.rsp -g   -std=gnu++17 -o CMakeFiles\\Cpp.dir\\Src\\Shape.cpp.obj -c D:\\yousa\\C++Project\\project\\sfml\\Src\\Shape.cpp",
+  "file": "D:/yousa/C++Project/project/sfml/Src/Shape.cpp"
+},
+{
+  "directory": "D:/yousa/C++Project/project/sfml/build",
+  "command": "D:\\yousa\\C++Project\\mingw64\\bin\\g++.exe   @CMakeFiles/Cpp.dir/includes_CXX.rsp -g   -std=gnu++17 -o CMakeFiles\\Cpp.dir\\Src\\main.cpp.obj -c D:\\yousa\\C++Project\\project\\sfml\\Src\\main.cpp",
+  "file": "D:/yousa/C++Project/project/sfml/Src/main.cpp"
+}
+]
