@@ -12,6 +12,7 @@ public:
 	void newShape();
 	Point position();
 	int checkLine();
+	bool checkWin();
 	int colorNum;
 	Point a[4], b[4];
 	const int M ;

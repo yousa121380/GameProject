@@ -35,7 +35,7 @@ private:
 	int gameMode;
 	int gamePoints;
 	float timer , delay;
-	bool Status;
+	int Status; //1表示正常游戏，0表示暂停游戏，-1表示游戏失败
 };
 
 

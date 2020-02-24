@@ -1,7 +1,7 @@
 #include "Game.h"
 #include <vector>
 Game::Game():window(sf::VideoMode(320, 480), "The Game!"), timer(0.0f), delay(0.5f), 
-	gamePoints(0),Status(true), gameMode(0), 
+	gamePoints(0),Status(1), gameMode(0), 
 	arrow(AssetManager::GetTexture("./Resources/Images/arrow_sheet.png")), 
 	frame(AssetManager::GetTexture("./Resources/Images/frame.png")),
 	background1(AssetManager::GetTexture("./Resources/Images/background.png")),
@@ -98,6 +98,7 @@ void Game::gameModeOne()
 		gamePoints += shape.checkLine();
 		message();
 		render();
+		if(shape.checkWin()) Status = -1;
 		delay = 0.5f;
 	}
 }
@@ -118,18 +119,18 @@ void Game::processEvents()
 			else if (e.key.code == sf::Keyboard::Left) shape.moveit(1,-1);
 			else if (e.key.code == sf::Keyboard::Right) shape.moveit(1,1);
 			else if (e.key.code == sf::Keyboard::Down) delay = 0.05f;
-			else if (e.key.code == sf::Keyboard::Space)
+			else if (e.key.code == sf::Keyboard::Space)   //暂停通过设置状态代码实现
 			{
-				if (Status) Status = false;
-				else Status = true;
+				if (Status == 1) Status = 0;
+				else if(Status == 0) Status = 1;
 			}
 		}
 	}
 }
 
-void Game::update()
+void Game::update()  //检测到状态代码
 {
-	if ((timer > delay)&&(Status))
+	if ((timer > delay)&&(Status == 1))
 	{
 		shape.moveit(2, 1);
 		shape.newShape();
@@ -175,7 +176,7 @@ void Game::render()
 	text.setStyle(sf::Text::Bold | sf::Text::Underlined);
 	text.setPosition(250, 50);
 	window.draw(text);
-	if (!Status)
+	if (Status == 0)
 	{
 		sf::RectangleShape timeOutBG;
 		timeOutBG.setSize(sf::Vector2f(320, 480));
@@ -193,6 +194,25 @@ void Game::render()
 		window.draw(timeOutBG);
 		window.draw(timeOutText);
 	}
+	else if(Status == -1)
+	{
+		sf::RectangleShape timeOutBG;
+		timeOutBG.setSize(sf::Vector2f(320, 480));
+		timeOutBG.setFillColor(sf::Color(255, 255, 255, 120));
+		timeOutBG.setPosition(0, 0);
+
+		sf::Text timeOutText;
+		timeOutText.setFont(font);
+		timeOutText.setString(sf::String("GAME OVER!"));
+		timeOutText.setCharacterSize(30);
+		timeOutText.setFillColor(sf::Color::Black);
+		timeOutText.setStyle(sf::Text::Bold | sf::Text::Underlined);
+		timeOutText.setPosition(55, 160);
+		
+		window.draw(timeOutBG);
+		window.draw(timeOutText);
+	}
+
 	window.display();
 }
 

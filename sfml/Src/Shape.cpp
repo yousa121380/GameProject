@@ -91,7 +91,16 @@ int Shape::checkLine()
 bool Shape::check()
 {
 	for (int i = 0; i < 4; i++)
-		if (a[i      ].x < 0 || a[i].x >= N || a[i].y >= M) return false;
+		if (a[i].x < 0 || a[i].x >= N || a[i].y >= M) return false;
 		else if (field[a[i].y][a[i].x]) return false;
 	return true;
+}
+
+bool Shape::checkWin()
+{
+	for(int i = 0; i < N; ++i)
+	{
+		if(field[1][i]) return true;
+	}
+	return false;
 }
